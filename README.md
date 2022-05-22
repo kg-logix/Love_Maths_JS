@@ -1,108 +1,86 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Love Maths Game
 
-Welcome kg-logix,
+This is an interactive web game based on JavaScript.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Participants of this game are presented with a maths challenge which they are required to compute and submit their answer. The website then alerts the user whether or not the naswer was correct. If not, the correct answer is displayed within the alert dialog box such that the participant is informed of the correct answer. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Game Design](/assets/images/game_design.png)
 
-## Gitpod Reminders
+# Table of Contents
+- [Features](#features-a-id"features-link"a)
+    - [Operand Buttons](#operand-buttons-a-id"operand-buttons-link"a)
+    - [Score Keeping](#score-keeping-a-id"score-keeping-link"a)
+    - [Page Load](#page-load-a-id"page-load-link"a)
+- [Testing](#testing-a-id"testing-link"a)
+    - [Bugs](#bugs-a-id"bugs-link"a)
+    - [Validator Testing](#validator-testing-a-id"validator-link"a)
+    - [Unfixed Bugs](#unfixed-bugs-a-id"unfixed-bugs-links"a)
+    - [Deployment](#deployment-a-id"deployment-link"a)
+- [Credits](#credits-a-id"credits-link"a)
+    - [Content](#content-a-id"content-link"a)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Features <a id="features-link"></a>
 
-`python3 -m http.server`
+## Operand Buttons <a id="operand-buttons-link"></a>
+- Beneath the title of the game, the participant finds four large buttons, each representing a mathemathical operator.
+- Selecting a buttons changes the challenge to that respective mathematical operator.
+- The subtact challenge is designed in such a way that the result is always positive so that the user does not need to include the negative symbol.
+- The division challenge is designed in such way that the result is always a positive whole number to avoid long irrational numbers.
 
-A blue button should appear to click: _Make Public_,
+![Operand Buttons](/assets/images/operand.png)
 
-Another blue button should appear to click: _Open Browser_.
+## Score Keeping <a id="score-keeping-link"></a>
+- At the bottom of the page a score keeping section is included which counts the number of correct and incorrect answers.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Score Keeping](/assets/images/score_keeping.png)
 
-A blue button should appear to click: _Make Public_,
+## Page Load <a id="page-load-link"></a>
+- On page load the web game executes two actions. 
 
-Another blue button should appear to click: _Open Browser_.
+- The first being that the default meth operation is chosen, this being the addition operator. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- Furthermore, the page focuses on the input section of the game such that the participant can immediately enter an asnwer and submit via an enter key press.
 
-To log into the Heroku toolbelt CLI:
+# Testing <a id="testing-link"></a>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+ - Page was tested to work in different browsers: 
+    - Chrome
+    - Firefox
+    - Safari
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- Confirmed that each button triggers its associated challenge and that the submit answer button work correctly.
 
-------
+- At each different operation challenge the game was tested against correct and incorrect answers. 
 
-## Release History
+- The scores at the bottom of the game were checked to be functioning correctly.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Bugs <a id="bugs-link"></a>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- No bugs have been detected ... yet.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Validator Testing <a id="validator-link"></a>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- HTML
+    - No errors were returned when passing through the official W3C validator.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- CSS
+    - No errors were found when passing throught the official (Jigsaw) validator
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- Accessibility
+    - Confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Unfixed Bugs <a id="unfixed-bugs-links"></a>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- No unfixed bugs
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# Deployment <a id="deployment-link"></a>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- The site was deployed to GitHub pages.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+The live link can be found [here]()
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Credits <a id="credits-link"></a>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Content <a id="content-link"></a>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+The code to make the website was built using a walk-through within an online course.
